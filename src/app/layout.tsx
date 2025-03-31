@@ -24,8 +24,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+        <style>{`
+          .bg-custom-radial {
+            background: radial-gradient(
+              circle at center,
+              rgba(250, 218, 221, 0.4) 0%,
+              rgba(232, 218, 253, 0.4) 30%,
+              rgba(218, 232, 253, 0.4) 60%,
+              #ffffff 90%
+            );
+          }
+        `}</style>
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-custom-radial`}
       >
         {children}
       </body>
